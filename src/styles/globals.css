@@ -7,7 +7,9 @@
 }
 
 :root {
-  --background-color: #0b0b0e;
+  width: 100vw; /* Set the width of the root element to full viewport width */
+  height: 100vh; /* Set the height of the root element to full viewport height */
+  background: linear-gradient(135deg, #8A2BE2, #800080, #4B0082, #0000FF, #00FF00); /* Rainbow gradient with predominantly purple */
   --text-color: #ffffff;
 
   --gamba-ui-border-radius: 10px;
@@ -183,7 +185,7 @@ body::-webkit-scrollbar-thumb {
 
 .game-card:hover {
   transform: scale(1.01);
-  outline: #9564ff33 solid 5px;
+  outline: #4c02eb33 solid 5px;
   outline-offset: 0px;
 }
 
@@ -224,4 +226,40 @@ body::-webkit-scrollbar-thumb {
   max-width: 500px;
   aspect-ratio: 1;
   margin: auto;
+}
+
+.creative-button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Set the container height to the full viewport height */
+}
+
+.creative-button {
+  border: none;
+  border-radius: 30px; /* Rounded corners */
+  padding: 15px 30px; /* Padding for spacing */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold font weight */
+  color: #fff; /* Text color */
+  background-color: #a210dc; /* Background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  cursor: pointer;
+  outline: none; /* Remove outline on focus */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
+}
+
+.creative-button:hover {
+  transform: translateY(-3px); /* Move button up on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.image-container {
+  text-align: center; /* Center the image horizontally */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 20px; /* Add some spacing between the image and the button */
 }
