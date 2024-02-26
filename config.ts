@@ -6,11 +6,11 @@ import { PublicKey } from "@solana/web3.js";
 
 // Solana address you wish to receive fees
 export const PLATFORM_CREATOR_ADDRESS = new PublicKey(
-  "GzzWXXDjLD4FDwDkWB5sARjC2aaLSfCQDjx3dmpoTY7K",
+  "FnjCFSugtzJjbYenmch4cn5o2s2eXkWU5apvpD2xWnry",
 );
 
 // Platform URL - Appears in ShareModal
-export const PLATFORM_SHARABLE_URL = "play-gamba.vercel.app";
+export const PLATFORM_SHARABLE_URL = "play-Solcade";
 
 // Toggle all live events acrossed gamba toast
 export const LIVE_EVENT_TOAST = true;
@@ -34,23 +34,6 @@ export const TOKENS: TokenMeta[] = [
       "https://bafkreiccbqs4jty2yjvuxp5x7gzgepquvv657ttauaqgxfhxghuz5us54u.ipfs.nftstorage.link/",
     decimals: 5,
     baseWager: 2000000 * 1e5,
-  },
-  {
-    mint: new PublicKey("ApxJeC9Pv5YbS3Ataq2kAfNeFLafEADVmC49czvFAP93"),
-    symbol: "SOLVEGAS",
-    name: "SolVegas",
-    image:
-      "https://bafybeiglvnotba6yf2rrie3ytr3qo5awn4h4vdukzscyc7xa5snvelqr6a.ipfs.nftstorage.link/",
-    decimals: 9,
-    baseWager: 10000 * 1e9,
-  },
-  {
-    mint: new PublicKey("8CofuxeTuXjrZSMahW9wYkedVoNcvwua6aJeM1UhxuLh"),
-    symbol: "TSTCOIN",
-    name: "TESTERCOIN",
-    image: "https://i.ibb.co/SvfbhLy/imageedit-37-6175591894.png",
-    decimals: 9,
-    baseWager: 1 * 1e9,
   },
   // Uncomment and configure this part if you have a custom SPL token you want to add
   // {
