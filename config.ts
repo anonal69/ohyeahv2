@@ -13,7 +13,7 @@ export const PLATFORM_CREATOR_ADDRESS = new PublicKey(
 export const PLATFORM_SHARABLE_URL = "play-Solcade";
 
 // Toggle all live events acrossed gamba toast
-export const LIVE_EVENT_TOAST = false;
+export const LIVE_EVENT_TOAST = true;
 
 // RPC - Can be configured in .env
 export const RPC_ENDPOINT =
