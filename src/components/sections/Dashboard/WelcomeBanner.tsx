@@ -26,7 +26,7 @@ export function WelcomeBanner() {
           <button className="creative-button" onClick={() => window.open('https://t.me/solcade/', '_blank')}>
             🚀 Telegram
           </button>
-          <button className="creative-button" onClick={() => window.open('https://x.com/solcadebets', '_blank')}>
+          <button className="creative-button" onClick={() => window.open('https://x.com/solarcadebets', '_blank')}>
             🚀 Twitter
           </button>
         </Buttons>
