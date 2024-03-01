@@ -36,6 +36,15 @@ export const TOKENS: TokenMeta[] = [
     baseWager: 10 * 1e6,
   }
 
+  {
+    mint: new PublicKey("JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN"),
+    symbol: 'JUP',
+    name: 'Jupiter',
+    image: "https://assets.coingecko.com/coins/images/34188/standard/jup.png?1704266489",
+    decimals: 6,
+    baseWager: 1 * 1e6,
+  }
+
   // Uncomment and configure this part if you have a custom SPL token you want to add
   // {
   //   mint: new PublicKey("Your_Token's_PublicKey"),
