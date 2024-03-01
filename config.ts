@@ -27,6 +27,15 @@ export const TOKENS: TokenMeta[] = [
   GambaStandardTokens.sol,
   GambaStandardTokens.usdc,
 
+  {
+    mint: new PublicKey("7vuhsRQ2gE4WPv37qegBKu8PcWHxDb5rQ6fQKkDfUghF"),
+    symbol: 'SOLCADE',
+    name: 'Solana Arcade',
+    image: "https://i.ibb.co/7GGztMG/logo-32.png",
+    decimals: 6,
+    baseWager: 10 * 1e6,
+  }
+
   // Uncomment and configure this part if you have a custom SPL token you want to add
   // {
   //   mint: new PublicKey("Your_Token's_PublicKey"),
