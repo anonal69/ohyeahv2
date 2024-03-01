@@ -34,7 +34,7 @@ export const TOKENS: TokenMeta[] = [
     image: "https://i.ibb.co/7GGztMG/logo-32.png",
     decimals: 6,
     baseWager: 10 * 1e6,
-  }
+  },
 
   {
     mint: new PublicKey("JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN"),
@@ -43,7 +43,7 @@ export const TOKENS: TokenMeta[] = [
     image: "https://assets.coingecko.com/coins/images/34188/standard/jup.png?1704266489",
     decimals: 6,
     baseWager: 1 * 1e6,
-  }
+  },
 
   // Uncomment and configure this part if you have a custom SPL token you want to add
   // {
