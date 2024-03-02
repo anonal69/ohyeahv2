@@ -9,7 +9,7 @@
 :root {
   width: 100vw; /* Set the width of the root element to full viewport width */
   height: 100vh; /* Set the height of the root element to full viewport height */
-  background: linear-gradient(135deg, #8A2BE2, #800080, #4B0082, #0000FF, #00FF00); /* Rainbow gradient with predominantly purple */
+  background-color: linear-gradient(to bottom, #b32f2f, #ff7f00, #f27610, #ff0000); /* Rainbow gradient with predominantly purple */
   --text-color: #ffffff;
 
   --gamba-ui-border-radius: 10px;
