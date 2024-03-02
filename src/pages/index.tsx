@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Play - Solana Arcade</title>
-        <meta name="title" content="Play - Solana Arcade" />
+        <title>Play - OHYEAH BET</title>
+        <meta name="title" content="Play - ohyeah-bet" />
         <meta
           name="description"
           content="A fair, simple, and decentralized casino on Solana."
@@ -20,7 +20,7 @@ export default function HomePage() {
         <meta property="og:url" content="" />
         <meta
           property="og:title"
-          content="Play - Solana Arcade"
+          content="Play - ohyeah bet"
         />
         <meta
           property="og:description"
@@ -38,7 +38,7 @@ export default function HomePage() {
         />
         <meta
           property="twitter:title"
-          content="Play - Solana Arcade"
+          content="Play - ohyeah bet"
         />
         <meta
           property="twitter:description"
