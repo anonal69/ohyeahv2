@@ -6,7 +6,7 @@ import { PublicKey } from "@solana/web3.js";
 
 // Solana address you wish to receive fees
 export const PLATFORM_CREATOR_ADDRESS = new PublicKey(
-  "4H78a8exeM6HDetdgpCFeQTo2jZcypwiGoebW9qrUG1s",
+  "7s3nxNnKcmJyBxxXeJb8AAJnRocJLCRhbrCcYhPKv5SP",
 );
 
 // Platform URL - Appears in ShareModal
@@ -28,11 +28,11 @@ export const TOKENS: TokenMeta[] = [
   GambaStandardTokens.usdc,
 
   {
-    mint: new PublicKey("7vuhsRQ2gE4WPv37qegBKu8PcWHxDb5rQ6fQKkDfUghF"),
-    symbol: 'SOLCADE',
-    name: 'Solana Arcade',
-    image: "https://i.ibb.co/7GGztMG/logo-32.png",
-    decimals: 6,
+    mint: new PublicKey("H8cstTfTxPEm5qP3UXgga8Bdzm2MCDGAghJTgovPy6Y1"),
+    symbol: 'OHYEAH',
+    name: 'KOOL-AID MAN',
+    image: "https://i.ibb.co/nL7j9YG/photo-2024-03-02-12-25-25.jpg",
+    decimals: 9,
     baseWager: 10 * 1e6,
   },
 
