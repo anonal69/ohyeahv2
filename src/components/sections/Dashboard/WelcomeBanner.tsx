@@ -23,11 +23,11 @@ export function WelcomeBanner() {
       </div>
       <div className="button-container">
         <Buttons>
-          <button className="creative-button" onClick={() => window.open('https://t.me/solcade/', '_blank')}>
-            🚀 Telegram
+          <button className="creative-button" onClick={() => window.open('https://t.me/KOOL_AID_MAN_SOL', '_blank')}>
+            Telegram
           </button>
-          <button className="creative-button" onClick={() => window.open('https://twitter.com/solcadebets', '_blank')}>
-            🚀 Twitter
+          <button className="creative-button" onClick={() => window.open('https://x.com/koolaidmansol?s=21&t=Hj99KZCum1FUaim2KVoteg', '_blank')}>
+            Twitter
           </button>
         </Buttons>
 
