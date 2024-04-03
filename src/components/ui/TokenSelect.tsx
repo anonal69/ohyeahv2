@@ -3,6 +3,7 @@ import {
   GambaPlatformContext,
   GambaUi,
   TokenValue,
+  useCurrentPool,
   useCurrentToken,
   useUserBalance,
 } from "gamba-react-ui-v2";
@@ -17,10 +18,15 @@ export default function TokenSelect() {
   const context = useContext(GambaPlatformContext);
   const selectedToken = useCurrentToken();
   const balance = useUserBalance();
+  const OHHYEAHTokenPublicKey = "H8cstTfTxPEm5qP3UXgga8Bdzm2MCDGAghJTgovPy6Y1";
 
   const setToken = (token: PublicKey) => {
-    context.setToken(token);
-    setVisible(false);
+    if (token.toString() === OHHYEAHTokenPublicKey) {
+      const ohYeahPoolAuthority = TOKENS[OHHYEAHTokenPublicKey].poolAuthority;
+      context.setPool(token, ohYeahPoolAuthority);
+    } else {
+      context.setPool(token);
+    }
   };
 
   const click = () => {
