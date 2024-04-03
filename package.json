@@ -8,7 +8,8 @@
     "devSSL": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
-    "clean": "rmdir /s /q .next && rmdir /s /q node_modules && rmdir /s /q .turbo"
+    "format": "prettier --write .",
+    "clean": "rmdir /s /q .next && rmdir /s /q node_modules"
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.27.0",
@@ -16,10 +17,10 @@
     "@react-three/drei": "^9.89.0",
     "@react-three/fiber": "^8.15.16",
     "@solana/spl-token": "^0.3.8",
+    "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
-    "@solana/wallet-adapter-react-ui": "^0.9.34",
-    "@solana/wallet-adapter-wallets": "^0.19.18",
-    "@solana/web3.js": "^1.78.5",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/web3.js": "^1.90.1",
     "gamba-core-v2": "0.2.0",
     "gamba-react-ui-v2": "0.3.0",
     "gamba-react-v2": "1.0.0",
@@ -34,6 +35,9 @@
     "styled-components": "^6.0.8",
     "three": "^0.158.0",
     "zustand": "^4.4.1"
+  },
+  "overrides": {
+    "@ngraveio/bc-ur": "1.1.6"
   },
   "devDependencies": {
     "@types/matter-js": "^0.19.5",
