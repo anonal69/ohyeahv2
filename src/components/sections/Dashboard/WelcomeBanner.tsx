@@ -29,9 +29,6 @@ export function WelcomeBanner() {
           <button className="creative-button" onClick={() => window.open('https://x.com/koolaidmansol?s=21&t=Hj99KZCum1FUaim2KVoteg', '_blank')}>
             Twitter
           </button>
-          <button className="creative-button" onClick={() => window.open('https://t.me/KOOL_AID_MAN_SOL', '_blank')}>
-            Telegram
-          </button>
           <button className="creative-button" onClick={() => window.open('https://dexscreener.com/solana/3zbz2skx3byyfgfxkvvqmcnumbqv2gtqau79vfbzyqv9', '_blank')}>
             Dexscreener
           </button>
