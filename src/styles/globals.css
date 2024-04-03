@@ -260,7 +260,9 @@ body::-webkit-scrollbar-thumb {
 
 .button-container {
   display: flex;
-  justify-content: center; /* Center the button horizontally */
-  margin-top: 20px; /* Add some spacing between the image and the button */
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-top: 20px;
   gap: 4px;
 }
