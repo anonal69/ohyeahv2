@@ -6,7 +6,11 @@ const Welcome = styled.div`
 `;
 
 const Buttons = styled.div`
-  /* Your buttons container styles */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
 `;
 
 const Image = styled.img`
