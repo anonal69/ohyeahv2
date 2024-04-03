@@ -75,16 +75,16 @@ export const GAMES: GameBundle[] = [
     },
     app: dynamic(() => import("./Plinko")),
   },
-  {
-    id: "wheel",
-    meta: {
-      background: "#77bbff",
-      name: "Wheel",
-      image: "/games/logo.png",
-      description: `Wheel involves spinning a wheel to land on a multiplier that determines your win. Simply place your bet and spin the wheel. The segment on which the wheel stops decides your multiplier and winnings. It's an engaging game of chance with straightforward gameplay.`,
-    },
-    app: dynamic(() => import("./Wheel"), { ssr: false }),
-  },
+  //{
+  //  id: "wheel",
+  //  meta: {
+  //    background: "#77bbff",
+  //    name: "Wheel",
+  //    image: "/games/logo.png",
+  //    description: `Wheel involves spinning a wheel to land on a multiplier that determines your win. Simply place your bet and spin the wheel. The segment on which the wheel stops decides your multiplier and winnings. It's an engaging game of chance with straightforward gameplay.`,
+  //  },
+  //  app: dynamic(() => import("./Wheel"), { ssr: false }),
+  //},
   {
     id: "limbo",
     meta: {
