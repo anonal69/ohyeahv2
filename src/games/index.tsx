@@ -5,6 +5,16 @@ import dynamic from "next/dynamic";
 
 export const GAMES: GameBundle[] = [
   {
+    id: "ohyeah",
+    meta: {
+      background: "#ff6490",
+      name: "Ohyeah",
+      image: "/games/logo.png",
+      description: `Double or nothing, oh yeah! The classic casino game with a twist.`,
+    },
+    app: dynamic(() => import("./Ohyeah")),
+  },
+  {
     id: "dice",
     meta: {
       background: "#ff6490",

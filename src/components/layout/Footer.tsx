@@ -61,7 +61,7 @@ export default function Footer() {
             href=""
             className="hover:underline"
           >
-            Bankk™
+            OHYEAH!
           </a>
         </span>
       </div>

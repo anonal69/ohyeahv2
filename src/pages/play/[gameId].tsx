@@ -21,7 +21,7 @@ const Game: React.FC<GameProps> = ({ gameId }) => {
   return (
     <>
       {game ? (
-        <div className="flex flex-col justify-center items-center mx-auto max-w-6xl max-sm:max-w-sm pt-20">
+        <div className="min-h-full flex flex-col justify-center items-center mx-auto max-w-6xl max-sm:max-w-sm pt-20">
           <GambaUi.Game game={game} errorFallback={<CustomError />}>
             <CustomRenderer />
           </GambaUi.Game>
