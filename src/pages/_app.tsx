@@ -17,7 +17,7 @@ import {
 import { AppProps } from "next/app";
 import Footer from "@/components/layout/Footer";
 import { GAMES } from "../games";
-import { GambaProvider } from "gamba-react-v2";
+import { GambaProvider, SendTransactionProvider } from "gamba-react-v2";
 import GameToast from "@/hooks/useGameEvent";
 import React from "react";
 import { Toaster } from "sonner";
@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <WalletProvider autoConnect wallets={[]}>
         <WalletModalProvider>
           <TokenMetaProvider tokens={TOKENLIST}>
+          <SendTransactionProvider priorityFee={400_201}>
             <GambaProvider>
               <GambaPlatformProvider
                 creator={PLATFORM_CREATOR_ADDRESS}
@@ -54,6 +55,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 {showDisclaimer && <DisclaimerModal />}
               </GambaPlatformProvider>
             </GambaProvider>
+          </SendTransactionProvider>
           </TokenMetaProvider>
         </WalletModalProvider>
       </WalletProvider>
