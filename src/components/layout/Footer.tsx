@@ -18,9 +18,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 href="https://explorer.gamba.so/create"
                 className="hover:underline me-4 md:me-6"
-              >
-                
-              </a>
+              ></a>
             </li>
             <li>
               <a
@@ -28,9 +26,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 href="https://github.com/BankkRoll/Gamba-V2-Next.js"
                 className="hover:underline me-4 md:me-6"
-              >
-                
-              </a>
+              ></a>
             </li>
             <li>
               <a
@@ -38,9 +34,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 href=""
                 className="hover:underline me-4 md:me-6"
-              >
-                
-              </a>
+              ></a>
             </li>
             <li>
               <a
@@ -48,19 +42,14 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 href=""
                 className="hover:underline"
-              >
-                
-              </a>
+              ></a>
             </li>
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
           {" "}
-          <a
-            href=""
-            className="hover:underline"
-          >
+          <a href="" className="hover:underline">
             OHYEAH!
           </a>
         </span>

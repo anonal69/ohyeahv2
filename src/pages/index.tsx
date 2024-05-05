@@ -18,10 +18,7 @@ export default function HomePage() {
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="" />
-        <meta
-          property="og:title"
-          content="Play - ohyeah bet"
-        />
+        <meta property="og:title" content="Play - ohyeah bet" />
         <meta
           property="og:description"
           content="A fair, simple, and decentralized casino on Solana."
@@ -36,10 +33,7 @@ export default function HomePage() {
           property="twitter:url"
           content="https://gamba-v2-nextjs.vercel.app/"
         />
-        <meta
-          property="twitter:title"
-          content="Play - ohyeah bet"
-        />
+        <meta property="twitter:title" content="Play - ohyeah bet" />
         <meta
           property="twitter:description"
           content="A fair, simple, and decentralized casino on Solana."

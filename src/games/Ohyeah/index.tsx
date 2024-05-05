@@ -1,4 +1,4 @@
-import { GambaUi, useWagerInput } from "gamba-react-ui-v2";
+import { GambaUi, useSound, useWagerInput } from "gamba-react-ui-v2";
 import React, { useState } from "react";
 
 import { toast } from "sonner";
@@ -20,17 +20,36 @@ export default function Ohyeah() {
     }
   };
 
+  const sound = useSound({
+    loading: "/games/ohyeah/loading.mp3",
+    loss: "/games/ohyeah/loss.mp3",
+    win: "/games/ohyeah/win.mp3",
+  });
+
   const play = async () => {
     setContentToShow("video");
 
+    let loadingSoundInterval;
+
     try {
+      sound.play("loading");
+
+      loadingSoundInterval = setInterval(() => {
+        sound.play("loading");
+      }, 8000);
+
       await game.play({ bet: [2, 0], wager });
       const result = await gamba.result();
       console.log(result);
 
+      clearInterval(loadingSoundInterval);
+
       setContentToShow(result.payout > 0 ? "win" : "loss");
+      sound.play(result.payout > 0 ? "win" : "loss");
     } catch (error) {
-    toast.error("Error playing the game.");
+      setContentToShow("start");
+      clearInterval(loadingSoundInterval);
+      toast.error("Error playing the game.");
       console.error("Error playing the game:", error);
     }
   };
@@ -39,47 +58,47 @@ export default function Ohyeah() {
     <>
       <GambaUi.Portal target="screen">
         <GambaUi.Responsive>
-        <div className="flex justify-center items-center m-auto">
-          {contentToShow === "start" ? (
-            <img
-            key={"start"}
-              src="/games/ohyeah/start.png"
-              alt="Start"
-              className="w-full h-full object-contain"
-            />
-          ) : contentToShow === "video" ? (
-            <video
-              key={"loading"}
-              autoPlay
-              muted={false}
-              playsInline
-              className="w-full h-full object-contain"
-              loop
-            >
-              <source src="/games/ohyeah/loading.mp4" type="video/mp4" />
-            </video>
-          ) : contentToShow === "win" ? (
-            <video
-              key={"win"}
-              autoPlay
-              muted={false}
-              playsInline
-              className="w-full h-full object-contain"
-            >
-              <source src="/games/ohyeah/win.mp4" type="video/mp4" />
-            </video>
-          ) : (
-            <video
-              key={"loss"}
-              autoPlay
-              muted={false}
-              playsInline
-              className="w-full h-full object-contain"
-            >
-              <source src="/games/ohyeah/loss.mp4" type="video/mp4" />
-            </video>
-          )}
-        </div>
+          <div className="flex justify-center items-center m-auto">
+            {contentToShow === "start" ? (
+              <img
+                key={"start"}
+                src="/games/ohyeah/start.png"
+                alt="Start"
+                className="w-full h-full object-contain"
+              />
+            ) : contentToShow === "video" ? (
+              <video
+                key={"loading"}
+                autoPlay
+                muted={true}
+                playsInline
+                className="w-full h-full object-contain"
+                loop
+              >
+                <source src="/games/ohyeah/loading.mp4" type="video/mp4" />
+              </video>
+            ) : contentToShow === "win" ? (
+              <video
+                key={"win"}
+                autoPlay
+                muted={true}
+                playsInline
+                className="w-full h-full object-contain"
+              >
+                <source src="/games/ohyeah/win.mp4" type="video/mp4" />
+              </video>
+            ) : (
+              <video
+                key={"loss"}
+                autoPlay
+                muted={true}
+                playsInline
+                className="w-full h-full object-contain"
+              >
+                <source src="/games/ohyeah/loss.mp4" type="video/mp4" />
+              </video>
+            )}
+          </div>
         </GambaUi.Responsive>
       </GambaUi.Portal>
       <GambaUi.Portal target="controls">

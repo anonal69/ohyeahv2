@@ -6,16 +6,17 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react";
+import { GambaPlatformProvider, TokenMetaProvider } from "gamba-react-ui-v2";
 import {
   LIVE_EVENT_TOAST,
   PLATFORM_CREATOR_ADDRESS,
   RPC_ENDPOINT,
+  TOKENLIST,
 } from "../../config";
 
 import { AppProps } from "next/app";
 import Footer from "@/components/layout/Footer";
 import { GAMES } from "../games";
-import { GambaPlatformProvider } from "gamba-react-ui-v2";
 import { GambaProvider } from "gamba-react-v2";
 import GameToast from "@/hooks/useGameEvent";
 import React from "react";
@@ -24,7 +25,6 @@ import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { useDisclaimer } from "@/hooks/useDisclaimer";
 
 function MyApp({ Component, pageProps }: AppProps) {
-
   const { showDisclaimer, DisclaimerModal } = useDisclaimer();
 
   return (
@@ -34,26 +34,27 @@ function MyApp({ Component, pageProps }: AppProps) {
     >
       <WalletProvider autoConnect wallets={[]}>
         <WalletModalProvider>
-          <GambaProvider>
-            <GambaPlatformProvider
-              creator={PLATFORM_CREATOR_ADDRESS}
-              games={GAMES}
-              defaultCreatorFee={0.05} // 5%
-              defaultJackpotFee={0.01} // 1%
-            >
-              <Component {...pageProps} />
-              <Footer />
-              <Toaster
-                position="bottom-right"
-                richColors
-                toastOptions={{
-                  style: { background: "#15151f" },
-                }}
-              />
-              {LIVE_EVENT_TOAST && <GameToast />}
-              {showDisclaimer && <DisclaimerModal />}
-            </GambaPlatformProvider>
-          </GambaProvider>
+          <TokenMetaProvider tokens={TOKENLIST}>
+            <GambaProvider>
+              <GambaPlatformProvider
+                creator={PLATFORM_CREATOR_ADDRESS}
+                defaultCreatorFee={0.05} // 5%
+                defaultJackpotFee={0.01} // 1%
+              >
+                <Component {...pageProps} />
+                <Footer />
+                <Toaster
+                  position="bottom-right"
+                  richColors
+                  toastOptions={{
+                    style: { background: "#15151f" },
+                  }}
+                />
+                {LIVE_EVENT_TOAST && <GameToast />}
+                {showDisclaimer && <DisclaimerModal />}
+              </GambaPlatformProvider>
+            </GambaProvider>
+          </TokenMetaProvider>
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>

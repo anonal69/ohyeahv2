@@ -85,16 +85,6 @@ export const GAMES: GameBundle[] = [
     },
     app: dynamic(() => import("./Plinko")),
   },
-  //{
-  //  id: "wheel",
-  //  meta: {
-  //    background: "#77bbff",
-  //    name: "Wheel",
-  //    image: "/games/logo.png",
-  //    description: `Wheel involves spinning a wheel to land on a multiplier that determines your win. Simply place your bet and spin the wheel. The segment on which the wheel stops decides your multiplier and winnings. It's an engaging game of chance with straightforward gameplay.`,
-  //  },
-  //  app: dynamic(() => import("./Wheel"), { ssr: false }),
-  //},
   {
     id: "limbo",
     meta: {
@@ -114,5 +104,15 @@ export const GAMES: GameBundle[] = [
       description: `Select up to 10 blocks and place your bets! Once the draw happens, watch closely to see if your numbers match the winning ones. Fewer numbers for a chance at bigger wins, or more numbers for better odds of winning smaller prizes.`,
     },
     app: dynamic(() => import("./Keno")),
+  },
+  {
+    id: "crash",
+    meta: {
+      background: "#FF9800",
+      name: "Crash",
+      image: "/games/logo.png",
+      description: `Predict a multiplier target and watch a rocket attempt to reach it. If the rocket crashes before the target, the player loses; if it reaches or exceeds the target, the player wins.`,
+    },
+    app: dynamic(() => import("./Crash")),
   },
 ];

@@ -9,7 +9,14 @@
 :root {
   width: 100vw; /* Set the width of the root element to full viewport width */
   height: 100vh; /* Set the height of the root element to full viewport height */
-  background: linear-gradient(135deg, #8A2BE2, #800080, #4B0082, #0000FF, #00FF00); /* Rainbow gradient with predominantly purple */
+  background: linear-gradient(
+    135deg,
+    #8a2be2,
+    #800080,
+    #4b0082,
+    #0000ff,
+    #00ff00
+  ); /* Rainbow gradient with predominantly purple */
   --text-color: #ffffff;
 
   --gamba-ui-border-radius: 10px;
@@ -127,6 +134,28 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+/* Game stepper animation */
+@keyframes purplePulse {
+  0% {
+    opacity: 1;
+    background-color: rgba(149, 76, 233, 0.6);
+  }
+
+  50% {
+    opacity: 0.7;
+    background-color: rgba(75, 0, 130, 0.8);
+  }
+
+  100% {
+    opacity: 1;
+    background-color: rgba(149, 76, 233, 0.6);
+  }
+}
+
+.animate-purplePulse {
+  animation: purplePulse 1.5s cubic-bezier(0.2, 0, 0.2, 1) infinite;
+}
+
 /* Recent plays skeleton pulse */
 @keyframes Skeleton {
   0% {
@@ -150,13 +179,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* GambaUi.WagerInput overriding styles */
-.sc-iBdnpw.gPLpOF img {
+.sc-iBdnpw.lkQOOO img {
   width: 2rem !important;
   height: 2rem !important;
 }
 
-.sc-kFCroH.bHGbMa {
-  width: 2rem !important;
+@media screen and (max-width: 768px) {
+  .sc-kFCroH.bHGbMa {
+    width: 4rem !important;
+  }
 }
 
 /* Dashbaord gamecard styles */
@@ -246,7 +277,9 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
   cursor: pointer;
   outline: none; /* Remove outline on focus */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease; /* Smooth transition */
 }
 
 .creative-button:hover {
