@@ -35,7 +35,7 @@ export function WelcomeBanner() {
             className="creative-button"
             onClick={() =>
               window.open(
-                "https://x.com/koolaidmansol?s=21&t=Hj99KZCum1FUaim2KVoteg",
+                "https://x.com/koolaidmansol",
                 "_blank",
               )
             }
@@ -55,7 +55,7 @@ export function WelcomeBanner() {
           </button>
           <button
             className="creative-button"
-            onClick={() => window.open("https://kool-aid.xyz/", "_blank")}
+            onClick={() => window.open("https://ohyeahgame.app/", "_blank")}
           >
             Website
           </button>
