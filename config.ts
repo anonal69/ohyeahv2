@@ -16,7 +16,7 @@ export const LIVE_EVENT_TOAST = true;
 
 // RPC - Can be configured in .env
 export const RPC_ENDPOINT =
-  process.env.NEXT_PUBLIC_RPC_ENDPOINT ?? "hhttps://mainnet.helius-rpc.com/?api-key=7b05747c-b100-4159-ba5f-c85e8c8d3997";
+  process.env.NEXT_PUBLIC_RPC_ENDPOINT ?? "https://mainnet.helius-rpc.com/";
 
 // Platform explorer URL - Appears in welcome banner
 export const PLATFORM_EXPLORER_URL = `https://explorer.gamba.so/platform/${PLATFORM_CREATOR_ADDRESS.toString()}`;
